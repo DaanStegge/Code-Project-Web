@@ -1,0 +1,722 @@
+/*Haalt de font van Transavia op*/
+@font-face{
+    font-family: 'Nexa-Regular';
+  src: url('Nexa-Regular.otf'); /* IE9 Compat Modes */
+  src: url('Nexa-Regular.otf') format('otf'), /* Super Modern Browsers */
+       url('Nexa-Regular.otf') format('otf'), /* Pretty Modern Browsers */
+}
+
+@font-face{
+    font-family: 'Nexa-Bold';
+  src: url('Nexa-Bold.otf'); /* IE9 Compat Modes */
+  src: url('Nexa-Bold.otf') format('otf'), /* Super Modern Browsers */
+       url('Nexa-Regular.otf') format('otf'), /* Pretty Modern Browsers */
+}
+
+@font-face {
+        font-family: "transico";
+        src: url(./transavicon.woff);
+    }
+
+/*Zet de standaard html font op alle pagina's*/
+html {
+  font-family: 'Nexa-Regular';
+}
+
+/*Standaard opmaak body*/
+body {
+  margin: 0 auto;
+  width: 100%;
+  font-family: 'Nexa-Regular';
+  background-image: url("./Images/backgroundfoto.png");
+  background-size: cover;
+}
+
+/*Navigatiebalk*/
+body > header{
+    background: #F7F7F7;
+    box-shadow: 0 0.3125em 0.625em 0 rgba(0,0,0,.15);
+    position: sticky;
+    z-index: 99;
+    top: 0;
+    padding: 1em;
+}
+
+/*header van verhaal met titel*/
+article header{
+  position: relative;
+  top: 1em;
+  z-index: 2;
+  margin: 0;
+  text-align: left;
+  margin: 1.25em;
+  display: block;
+}
+
+/*Vergroot eerste letter titel*/
+article header::first-letter{
+  font-size: 120%;
+}
+
+/*Navigatiebalk items*/
+header{
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Iconen in navigatie (home en account)*/
+header nav li img {
+  width: 2.5em;
+  display: flex;
+  flex-direction: row;
+  display: inline-block;
+  margin-right: .5em;
+  position: relative;
+  top: 7px;
+}
+
+/*Zorgt voor Transavia iconen in de a knoppen*/
+section a::first-letter{
+font-family: "transico";
+}
+
+/*Tekst naast iconen in navigatie*/
+header nav span{
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 1em;
+  margin-right: 2em;
+  color: #00D66C;
+  font-size: 1em;
+  position: relative;
+  top: 7px;
+}
+
+/*zet de a'tjes naar bold*/
+nav a {
+  font-family: 'Nexa-Bold';
+}
+
+/*Navigatie inline-block naast het logo*/
+nav {
+  display: inline-block;
+}
+
+nav ul{
+  padding: 0;
+  margin: 0;
+}
+
+/*Transavia logo*/
+header a img{
+  width: 9em;
+  margin-left: 0.6em;
+  position: relative;
+  top: 4px;
+}
+
+/*Navigatie elementen naast elkaar zetten*/
+header nav li{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*Tussen kopjes van de secties*/
+h2{
+ color: #FF3268;
+ margin: 0.5em 0 0.5em 0;
+ font-size: 2em;
+ margin-left: 0.5em;
+}
+
+/*kopje accountpagina*/
+header h2{
+margin: 0.7em 0 0 0.7em;
+}
+
+/*Zorgt ervoor dat alle a'tjes geen lijn onder de tekst hebben*/
+a{
+  text-decoration: none;
+}
+
+/*Opmaak van titels*/
+h3 {
+  background-color: rgba(32,20,153,0.9);
+  padding: 0.6em 0.6em 0.2em 0.6em;
+  border-radius: 0.5em;
+  color: white;
+  font-size: 1.5em;
+  display: inline;
+  margin-bottom: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 94%;
+  overflow: hidden;
+  display: inline-block;
+  margin-top: 0;
+}
+
+/*Padding voor alle secties met verhalen*/
+section{
+  padding: 0.5em;
+}
+
+/*Kaartjes van de verhalen*/
+section article {
+  position: relative;
+  overflow: hidden;
+  background-color: white;
+  border-style: none;
+  display: inline-block;
+  border-radius: 1.5em;
+  width: 100%;
+  text-align: center;
+  height: 290px;
+  margin-bottom: 1em;
+}
+
+/*Hover voor alle verhalen*/
+section article:hover {
+  top: -3px;
+}
+
+/*Hartje (like button) van de verhalen*/
+article footer img{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0.4em 0.5em 0.4em 0.4em;
+    border-style: none;
+    width: 40px;
+    z-index: 2;
+}
+
+/*Zorgt dat de images op de kaartjes van de verhalen de juiste grootte zijn*/
+.background-img{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+/*Opmaak knoppen*/
+.zoek, .filter {
+  background-color: #FF3268;
+  display: inline-block;
+  padding: .675em 1.5em .5625em;
+  border-style: none;
+  color: white;
+  font-family: 'Nexa-Bold';
+  font-size: 0.7em;
+  border-bottom: 5px solid #CA2B55;
+  border-radius: 1.25em;
+  margin-bottom: 1em;
+  font-size: 1em;
+  margin-left: 0.5em;
+}
+
+/*Zet de filters knop onder de zoeken knop*/
+.filter {
+  display: block;
+}
+
+/*Hovers voor alle overige buttons en a'tjes*/
+button:hover, a:hover {
+	position: relative;
+  top: -2px;
+  color: black;
+}
+
+/*Iconen voor de zoekknop en loginbutton*/
+.zoek::first-letter, .loginbutton::first-letter{
+  font-family: "transico";
+}
+
+/* Footer met tijd van verhalen*/
+main section footer {
+  border-style: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.5em 0 0.5em 0;
+  width: 100%;
+  background-color: #00D66C;
+  display: inline-block;
+  border-bottom: 5px solid #1E9162;
+  color: white;
+  font-size: 1.5em;
+  z-index: 30;
+  font-family: 'Nexa-Bold';
+}
+
+article footer p {
+  margin: auto;
+  position: relative;
+  top: 3px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 1em 0.5em 1em;
+}
+footer > p{
+  margin-top: 0;
+}
+
+footer span{
+  flex-grow: 1;
+  display: block;
+}
+
+footer img {
+  width: 2em;
+}
+
+footer a {
+  padding-left: 1em;
+}
+.popup{
+  background: white;
+  color: black;
+  font-size: 0.6em;
+  padding: 0.5em;
+  position: absolute;
+  right: 3.5em;
+  top: -4.5em;
+  border-radius: 0.25em;
+  max-width: 12em;
+  box-shadow: 0.5em 0.5em 1em 0px rgba(0,0,0,0.4);
+  display: none;
+}
+.popup.active{
+  display: block;
+}
+main section button {
+  display: inline-block;
+}
+
+fieldset h1 {
+  font-size: 1.8em;
+  margin: 0.2em 0 0.5em 0;
+}
+
+fieldset label {
+  font-family: 'Nexa-Bold';
+  font-size: 1em;
+}
+
+fieldset{
+  margin: 1em;
+  border-radius: 0.6em;
+}
+
+fieldset input{
+  margin-bottom: 2em;
+}
+
+main img[alt="background"]{
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+/*
+Bron form: https://codepen.io/joostf/pen/VKyPxk
+Correct ingevulde form box*/
+form {
+  display:flex;
+  flex-direction:column;
+  transition: all .5s;
+  padding: 0.5em;
+}
+
+/*Goed ingevulde fieldset*/
+fieldset {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  margin-bottom: 1em;
+  border:none;
+  transition: all .2s;
+  padding:1em;
+  background: white;
+}
+
+/*Feedback als de inputvelden goed ingevuld zijn*/
+fieldset p {
+  display:block;
+  color: White;
+  background:#00D66C;
+  border-radius: 1em;
+  width: 30%;
+  text-align: center;
+  margin: auto;
+  padding: 0.5em;
+}
+
+fieldset h2 {
+  margin: 0.2em 0.5em 0.5em 0;
+}
+
+/*Default fieldsets*/
+fieldset:invalid {
+  background: white;
+}
+
+/*Zet correct melding niet weer als de fieldset invalid is*/
+fieldset:invalid p {
+  display:none;
+}
+
+/*Inputvelden*/
+input {
+  border-color:#000;
+  font-size: 1em;
+  width:100%;
+  transition:all .2s;
+  z-index:2;
+  color: #606060;
+  border-radius: 0.4em;
+  padding: 0.5em 0 0.5em 0.3em;
+  border: 1px solid #94A3B5;
+}
+
+/*Correct ingevulde inputveld*/
+input:valid {
+  border-color:#60D277;
+}
+
+/*Focus op input veld als je deze selecteert*/
+input:focus {
+  transform: scale(1.01, 1.01);
+}
+
+input:disabled {
+  border-color:#eee;
+  background-color: #f9f9f9;
+}
+
+/*Placeholder tekst*/
+input::placeholder {
+  color:rgba(0,0,0,.25);
+}
+
+/*Login & Registreer buttons die worden weergegeven zodra de fieldsets valid zijn*/
+form button {
+  transition:all .2s 1s;
+  width:10em;
+}
+
+fieldset h3 {
+  background: none;
+  color: black;
+  padding: 0;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+form .zoek {
+display: block;
+margin: auto;
+margin-top: 1em;
+}
+#zoeken {
+  display: flex;
+}
+#zoeken span{
+  font-family: "transico";
+  font-size: 1.5em;
+  display: inline-block;
+  margin-top: 0.2em;
+}
+#zoeken input{
+  outline: none;
+  margin-left: 1em;
+  width: 0;
+  display: none;
+  transition: width 2s;
+}
+#zoeken input.active{
+  animation: search 2s forwards;
+  display: inline-block;
+    width: 14em;
+}
+@keyframes search {
+  0%{
+    width: 0;
+  }
+  100%{
+    width: 14em;
+  }
+}
+.loginbutton {
+  background-color: #AAAFB4;
+  display: inline-block;
+  padding: .675em 1.5em .5625em;
+  border-style: none;
+  color: white;
+  font-family: 'Nexa-Bold';
+  font-size: 0.7em;
+  border-bottom: 5px solid grey;
+  border-radius: 1.25em;
+  margin-bottom: 1em;
+  font-size: 1em;
+  margin-left: 0.5em;
+  margin: auto;
+}
+
+form:valid button {
+  background-color: #FF3268;
+  border-bottom: 5px solid #CA2B55;
+}
+
+form button:focus {
+  transform: scale(1.1, 1.1);
+}
+
+div section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div section h3 {
+  font-size: 1.3em;
+  background: none;
+  text-align: center;
+  margin: auto;
+  color: black;
+}
+
+.lijst section{
+ background: white;
+margin: 1em 1em;
+border-radius: 1.25em;
+border-bottom: 0.2em solid rgba(0,0,0,.15);
+}
+
+section button, .download {
+  font-family: "transico";
+  border-radius: 50%;
+  padding: 0.4em;
+  border: none;
+  font-size: 1.5em;
+  background: #FF3268;
+  border-bottom: 0.1em solid #CA2B55;
+}
+
+.download {
+  background: #65A1D7;
+  border-bottom: 0.1em solid #2b87d8;
+}
+
+.removed{
+display: none;
+}
+
+.downloaded {
+  background: #00D66C;
+    border-bottom: 0.1em solid #1E9162;
+}
+
+.lijst p{
+  color: #FF3268;
+  margin-left: 1em;
+}
+
+header .zoek {
+margin: 1em;
+}
+
+div fieldset{
+  background: #00D66C;
+}
+
+legend{
+  font-size: 1.5em;
+  position: absolute;
+  color: white;
+  font-family: "Nexa-Bold"
+}
+
+div fieldset label {
+  font-family: 'Nexa-Regular';
+}
+
+.western img{
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  position: sticky;
+  top: 2.2em;
+}
+
+.transaviastories{
+  display: none;
+}
+
+.footerverhaal {
+  background: #00D66C;
+  padding-top: 2em;
+}
+
+.mobileverhaal {
+  margin-bottom: 1em;
+  width: 100vw;
+}
+
+.desktopverhaal {
+  display: none;
+}
+
+.backgroundtwitter {
+  background-color: #2A2831;
+}
+
+.backgroundhardboiled {
+  background-image: url("./Images/backgroundhardboiled.png");
+}
+#filters{
+  display: none;
+  max-height: 0;
+}
+#filters.active{
+  display: block;
+  animation: bounce 2s forwards;
+}
+#filters fieldset{
+  padding-top: 4em;
+}
+#filters legend{
+  margin-top: -2em;
+}
+#filters label{
+  display: inherit;
+  white-space: nowrap;
+}
+#filters input{
+  margin-top: 0;
+  margin-left: 0.5em;
+}
+@keyframes bounce {
+  0%{
+    max-height: 0;
+  }
+  100%{
+    max-height: 50em;
+  }
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+40% {
+    -moz-transform: translateY(30px);
+    -ms-transform: translateY(30px);
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+}
+
+60% {
+    -moz-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -webkit-transform: translateY(15px);
+    transform: translateY(15px);
+}
+}
+
+@media (max-width:48em){
+  .navdesktop{
+    display: none;
+  }
+
+  fieldset p {
+    width: 50%;
+  }
+
+}
+
+@media (min-width:48em) and (max-width: 80em){
+
+  section div, .lijst{
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-gap: 2%;
+  }
+
+  .lijst {
+    grid-gap: 0;
+  }
+
+fieldset {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+.transaviastories{
+  display: block;
+}
+
+.stories{
+  display: none;
+}
+
+header a img{
+  width: 18em;
+}
+
+}
+
+
+@media (min-width:80em) {
+
+
+   section div, .lijst{
+     display: grid;
+     grid-template-columns: 32% 32% 32%;
+     grid-gap: 1.666%;
+   }
+
+   .lijst {
+     grid-gap: 0;
+   }
+
+   fieldset {
+     width: 50%;
+     margin: auto;
+       margin-bottom: 1em;
+   }
+
+   .mobileverhaal{
+    display: none;
+  }
+
+  .desktopverhaal{
+    display: block;
+    width: 100vw;
+  }
+
+  .western img {
+    top: 5em;
+  }
+
+  .transaviastories{
+    display: block;
+  }
+
+  .stories{
+    display: none;
+  }
+
+  header a img{
+    width: 18em;
+  }
+
+}
